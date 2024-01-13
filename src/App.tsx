@@ -1,34 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Box, Typography } from '@mui/material'
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   <Box bgcolor={'#fb654e'} display={'flex'} justifyContent={'center'} minWidth={'100vh'} minHeight={'100vh'} >
+    <Box alignSelf={'center'}>
+      <Box id='gif' textAlign={'center'} >
+    <iframe src="https://giphy.com/embed/f7b9ltJ4FrhnsKjYx2" width="960" height="540" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/tlceurope-f7b9ltJ4FrhnsKjYx2"></a></p>
+    </Box>
+  
+    <Typography color={'white'} fontFamily={'HiddenCocktails'}  textAlign={'center'} variant="h1">Together In Need is under construction at the moment!</Typography>
+   
+    </Box>
+      </Box>
   )
 }
 
