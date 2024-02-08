@@ -8,6 +8,15 @@ import { useNavigate } from "react-router-dom";
 
 function NavBar() {
   const navigate = useNavigate();
+  const handleButtonClick = (destination: string) => {
+    // Step 1: Navigate to the loading screen first
+    navigate("/loadingScreen");
+
+    // Step 2: Delay navigation to the final destination
+    setTimeout(() => {
+      navigate(destination);
+    }, 2000); // Adjust the timeout duration as needed
+  };
   return (
     <Box
       display={"flex"}
@@ -42,7 +51,7 @@ function NavBar() {
             fontSize: "1rem",
           }}
           variant="text"
-          onClick={() => navigate("/")}
+          onClick={() => handleButtonClick("/")}
         >
           Home
         </Button>
@@ -52,7 +61,7 @@ function NavBar() {
             fontFamily: "Gloria Hallelujah",
             fontSize: "1rem",
           }}
-          onClick={() => navigate("/about")}
+          onClick={() => handleButtonClick("/about")}
         >
           About
         </Button>
@@ -62,7 +71,7 @@ function NavBar() {
             fontFamily: "Gloria Hallelujah",
             fontSize: "1rem",
           }}
-          onClick={() => navigate("/contact")}
+          onClick={() => handleButtonClick("/contact")}
         >
           Contact
         </Button>
@@ -72,7 +81,7 @@ function NavBar() {
             fontFamily: "Gloria Hallelujah",
             fontSize: "1rem",
           }}
-          onClick={() => navigate("/services")}
+          onClick={() => handleButtonClick("/services")}
         >
           Services
         </Button>

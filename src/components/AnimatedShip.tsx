@@ -4,7 +4,7 @@ function AnimatedShip() {
   return (
     <div className="sea">
       <div className="circle-wrapper">
-        <div className="bubble"></div>
+        <div className="bubble12"></div>
         <div className="submarine-wrapper">
           <div className="submarine-body">
             <div className="window"></div>

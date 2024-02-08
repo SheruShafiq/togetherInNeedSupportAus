@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material";
 
 import AnimatedShip from "../components/AnimatedShip";
 import Bubbles from "../components/Bubbles";
+import Footer from "../components/Footer";
 import GIF from "../assets/bac.gif";
 import NavBar from "../components/NavBar";
 import ServicesComponent from "../components/ServicesComponent";
@@ -84,6 +85,26 @@ function Home() {
       </Box>
       <ServicesComponent />
       <Bubbles />
+      <Footer />
+      <footer
+        style={{
+          backgroundColor: "#1876D1",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "10vh",
+        }}
+      >
+        <p
+          style={{
+            color: "#ffff",
+            fontFamily: "Gloria Hallelujah",
+            fontSize: "1.5rem",
+          }}
+        >
+          Copyright © 2023 togetherinneedsupport
+        </p>
+      </footer>
     </Box>
   );
 }
