@@ -9,18 +9,17 @@ import GIF from "../assets/bac.gif";
 import NavBar from "../components/NavBar";
 import React from "react";
 import ServicesComponent from "../components/ServicesComponent";
+import ServicesM from "../components/ServicesComponentM";
 import { useEffect } from "react";
 import useResizeHandler from "../hooks/useResizeHandler";
 
 function Home() {
   const size = useResizeHandler();
-  const [mobile, setMobile] = React.useState(false);
+  const [mobile, setMobile] = React.useState(true);
 
   useEffect(() => {
     if (size.width <= 600) {
       setMobile(true);
-      console.log(mobile);
-      console.log(size);
     } else {
       setMobile(false);
     }
@@ -99,7 +98,7 @@ function Home() {
         </Box>
         <AnimatedShip />
       </Box>
-      <ServicesComponent />
+      {mobile ? <ServicesM /> : <ServicesComponent />}
       <Bubbles />
       <Footer />
       <footer
