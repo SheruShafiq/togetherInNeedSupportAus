@@ -13,38 +13,67 @@ function NavBar() {
       display={"flex"}
       flexDirection={"row"}
       minWidth={"100%"}
-      alignSelf={"center"}
-      justifyContent={"center"}
       flexGrow={"1"}
       bgcolor={"white"}
-      maxHeight={"100px"}
+      maxHeight={"130px"}
+      py={"0.5rem"}
+      justifyContent={"space-between"}
     >
       <Box
         alignSelf={"flex-start"}
         display={"flex"}
         flexDirection={"row"}
-        height={"100px"}
+        height={"130px"}
         mr={60}
       >
         <img src={Logo} alt="" />
       </Box>
       <Box
+        mr={"1rem"}
         display={"flex"}
         flexDirection={"row"}
         gap={2}
         maxHeight={"2rem"}
-        mt={"2rem"}
+        alignSelf={"center"}
       >
-        <Button variant="text" onClick={() => navigate("/")}>
+        <Button
+          sx={{
+            fontFamily: "Gloria Hallelujah",
+            fontSize: "1rem",
+          }}
+          variant="text"
+          onClick={() => navigate("/")}
+        >
           Home
         </Button>
-        <Button variant="text" onClick={() => navigate("/about")}>
+        <Button
+          variant="text"
+          sx={{
+            fontFamily: "Gloria Hallelujah",
+            fontSize: "1rem",
+          }}
+          onClick={() => navigate("/about")}
+        >
           About
         </Button>
-        <Button variant="text" onClick={() => navigate("/contact")}>
+        <Button
+          variant="text"
+          sx={{
+            fontFamily: "Gloria Hallelujah",
+            fontSize: "1rem",
+          }}
+          onClick={() => navigate("/contact")}
+        >
           Contact
         </Button>
-        <Button variant="text" onClick={() => navigate("/services")}>
+        <Button
+          variant="text"
+          sx={{
+            fontFamily: "Gloria Hallelujah",
+            fontSize: "1rem",
+          }}
+          onClick={() => navigate("/services")}
+        >
           Services
         </Button>
         <Box display={"flex"} alignItems={"center"}>
@@ -54,6 +83,12 @@ function NavBar() {
             variant="standard"
             sx={{
               mb: "1rem",
+              fontFamily: "Gloria Hallelujah",
+              fontSize: "1rem",
+              "& .MuiInputLabel-root": {
+                fontFamily: "Gloria Hallelujah",
+                fontSize: "1rem",
+              },
             }}
           />
           <Icon color="action">

@@ -1,3 +1,5 @@
+import "../pageStyles/Home.css";
+
 import { Box, Typography } from "@mui/material";
 
 import GIF from "../assets/bac.gif";
@@ -17,25 +19,35 @@ function Home() {
         width={"100%"}
         minHeight={"40vh"} // Set a minimum height for the banner
         display={"flex"}
-        justifyContent={"center"}
-        alignItems={"center"}
+        justifyContent={"flex-start"}
+        flexDirection={"column"}
         style={{
           backgroundImage: `url(${GIF})`, // Set the GIF as the background image
           backgroundSize: "cover", // Cover the entire Box area
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
+        id="bg"
+        p={10}
       >
-        <Typography
-          variant="h2"
-          fontWeight={"900"}
-          component="h1"
-          color={"#FFFFFF"}
-          style={{ color: "#FFFFFF", textAlign: "left" }}
-        >
+        <h3 className="animate-charcter">
           Empowering Lives,
           <br />
           Embracing All Abilities.
+        </h3>
+
+        <Typography
+          maxWidth={"60%"}
+          variant="h5"
+          fontWeight={"100"}
+          component="p"
+          textAlign={"left"}
+          color={"#ffffff"}
+          fontFamily="Gloria Hallelujah"
+        >
+          Empowering individuals with disabilities to thrive and achieve their
+          full potential through compassionate care and comprehensive support
+          services.
         </Typography>
       </Box>
     </Box>

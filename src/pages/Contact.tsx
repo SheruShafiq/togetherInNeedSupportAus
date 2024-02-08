@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 
 import NavBar from "../components/NavBar";
 import React from "react";
@@ -13,7 +13,7 @@ function Contact() {
       flexDirection={"column"}
     >
       <NavBar />
-      <Box alignSelf={"center"}>
+      <Stack alignSelf={"center"} display={"flex"}>
         <Typography
           color={"white"}
           fontFamily={"HiddenCocktails"}
@@ -22,7 +22,7 @@ function Contact() {
         >
           This is the Contact page!
         </Typography>
-      </Box>
+      </Stack>
     </Box>
   );
 }
