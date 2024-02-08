@@ -1,57 +1,40 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import GIF from "../assets/bac.gif";
+import NavBar from "../components/NavBar";
 
 function Home() {
-  const navigate = useNavigate();
-
   return (
     <Box
       bgcolor={"#fb654e"}
       display={"flex"}
-      justifyContent={"center"}
       minWidth={"100vh"}
       minHeight={"100vh"}
       flexDirection={"column"}
     >
+      <NavBar />
       <Box
+        width={"100%"}
+        minHeight={"40vh"} // Set a minimum height for the banner
         display={"flex"}
-        flexDirection={"row"}
-        gap={5}
-        my={"1rem"}
-        alignSelf={"center"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        style={{
+          backgroundImage: `url(${GIF})`, // Set the GIF as the background image
+          backgroundSize: "cover", // Cover the entire Box area
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
       >
-        <Button variant="contained" onClick={() => navigate("/about")}>
-          About
-        </Button>
-        <Button variant="contained" onClick={() => navigate("/contact")}>
-          Contact
-        </Button>
-        <Button variant="contained" onClick={() => navigate("/services")}>
-          Services
-        </Button>
-      </Box>
-      <Box alignSelf={"center"}>
-        <Box id="gif" textAlign={"center"}>
-          <iframe
-            src="https://giphy.com/embed/f7b9ltJ4FrhnsKjYx2"
-            width="960"
-            height="540"
-            className="giphy-embed"
-            allowFullScreen
-          ></iframe>
-          <p>
-            <a href="https://giphy.com/gifs/tlceurope-f7b9ltJ4FrhnsKjYx2"></a>
-          </p>
-        </Box>
         <Typography
-          color={"white"}
-          fontFamily={"HiddenCocktails"}
-          textAlign={"center"}
-          variant="h1"
+          variant="h2"
+          fontWeight={"900"}
+          component="h1"
+          style={{ color: "#FFFFFF", textAlign: "left" }}
         >
-          Together In Need is under construction at the moment!
+          Empowering Lives,
+          <br />
+          Embracing All Abilities.
         </Typography>
       </Box>
     </Box>
