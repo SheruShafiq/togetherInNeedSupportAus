@@ -7,6 +7,9 @@ import CustomButton from "../components/CustomButton";
 import DayProgam from "../assets/Day-Program.png";
 import GIF from "../assets/bac.gif";
 import NavBar from "../components/NavBar";
+import SupportCoordination from "../assets/Support-Coordination.png";
+import SupportWork from "../assets/supportWork.png";
+import devLearning from "../assets/Play-based-developmental-learning-1.png";
 
 function Home() {
   return (
@@ -82,7 +85,7 @@ function Home() {
         </Box>
         <AnimatedShip />
       </Box>
-      <Stack alignSelf={"center"} gap={10} mt={"12rem"}>
+      <Stack alignSelf={"center"} gap={10} mt={"15rem"}>
         <Box display={"flex"} gap={20} alignSelf={"center"}>
           <Stack mt={"-15rem"} justifyContent={"center"}>
             <Box
@@ -107,11 +110,82 @@ function Home() {
               Day Programs
             </Typography>
           </Stack>
-          <CustomButton />
-          <CustomButton />
+
+          <Stack mt={"-8rem"} justifyContent={"center"} width={"210px"}>
+            <Box
+              component="img"
+              sx={{
+                height: "240px",
+                width: "340px",
+                bottom: "-35px",
+                right: "80px",
+                zIndex: 0,
+              }}
+              position={"relative"}
+              alt="Support Work"
+              src={SupportWork}
+            />
+            <CustomButton />
+            <Typography
+              fontSize={"2rem"}
+              mt={"1rem"}
+              ml={"-1rem"}
+              fontFamily="Gloria Hallelujah"
+              width={"100%"}
+            >
+              Support Work
+            </Typography>
+          </Stack>
+          <Stack mt={"-8rem"} justifyContent={"center"} width={"220px"}>
+            <Box
+              component="img"
+              sx={{
+                height: "160px",
+                width: "240px",
+                bottom: "35px",
+                right: "40px",
+                zIndex: 0,
+              }}
+              position={"relative"}
+              alt="Support Coordination"
+              src={SupportCoordination}
+            />
+            <CustomButton />
+            <Typography
+              fontSize={"2rem"}
+              mt={"1rem"}
+              ml={"-1rem"}
+              fontFamily="Gloria Hallelujah"
+              textAlign={"center"}
+            >
+              Support Coordination
+            </Typography>
+          </Stack>
         </Box>
         <Box display={"flex"} gap={40}>
-          <CustomButton />
+          <Stack justifyContent={"center"} width={"220px"} mt="-5rem">
+            <Box
+              component="img"
+              sx={{
+                height: "280px",
+                width: "340px",
+                right: "5rem",
+                zIndex: 0,
+                bottom: "-40px",
+              }}
+              position={"relative"}
+              alt="Play-Based Developmental Learning"
+              src={devLearning}
+            />
+            <CustomButton />
+            <Typography
+              fontSize={"2rem"}
+              fontFamily="Gloria Hallelujah"
+              textAlign={"center"}
+            >
+              Play-Based Developmental Learning
+            </Typography>
+          </Stack>
           <CustomButton />
           <CustomButton />
         </Box>
