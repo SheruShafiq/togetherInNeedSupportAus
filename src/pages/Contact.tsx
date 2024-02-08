@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
+import NavBar from "../components/NavBar";
 import React from "react";
 
 function Contact() {
@@ -7,10 +8,11 @@ function Contact() {
     <Box
       bgcolor={"#fb654e"}
       display={"flex"}
-      justifyContent={"center"}
       minWidth={"100vh"}
       minHeight={"100vh"}
+      flexDirection={"column"}
     >
+      <NavBar />
       <Box alignSelf={"center"}>
         <Typography
           color={"white"}
