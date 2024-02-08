@@ -1,6 +1,5 @@
 import "./CustomButton.css";
 
-import React from "react";
 function CustomButton() {
   return (
     <button className="btn-class-name">

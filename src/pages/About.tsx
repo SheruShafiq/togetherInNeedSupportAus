@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
 import NavBar from "../components/NavBar";
-import React from "react";
 
 function About() {
   return (
