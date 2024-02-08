@@ -7,7 +7,10 @@ function CustomButton() {
 
   const handleButtonClick = () => {
     // Step 1: Navigate to the loading screen first
-    navigate("/loadingScreen");
+
+    setTimeout(() => {
+      navigate("/loadingScreen");
+    }, 250);
 
     // Step 2: Delay navigation to the final destination
     setTimeout(() => {
