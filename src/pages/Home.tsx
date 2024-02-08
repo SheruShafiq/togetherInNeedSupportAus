@@ -1,14 +1,15 @@
 import "../pageStyles/Home.css";
 
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 
+import AnimatedShip from "../components/AnimatedShip";
+import CustomButton from "../components/CustomButton";
 import GIF from "../assets/bac.gif";
 import NavBar from "../components/NavBar";
 
 function Home() {
   return (
     <Box
-      bgcolor={"#fb654e"}
       display={"flex"}
       minWidth={"100vh"}
       minHeight={"100vh"}
@@ -27,7 +28,6 @@ function Home() {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        id="bg"
         p={10}
       >
         <h3 className="animate-charcter">
@@ -50,6 +50,47 @@ function Home() {
           services.
         </Typography>
       </Box>
+      <Box
+        display={"flex"}
+        justifyContent={"center"}
+        width={"100%"}
+        py={"5rem"}
+      >
+        <Typography textAlign={"center"} maxWidth={"70%"}>
+          Welcome to Together in Need Support Services Australia, your trusted
+          partner in providing specialized support and care for individuals with
+          autism and a wide range of intellectual disabilities. We are a
+          dedicated disability support agency committed to enhancing the lives
+          of those we serve by offering a holistic and person-centered approach
+          to care. Our team is passionate about making a positive impact in the
+          lives of our clients and their families. We take pride in offering a
+          wide array of services tailored to meet the diverse needs of the
+          individuals we support.
+        </Typography>
+      </Box>
+      <Box
+        display={"flex"}
+        justifyContent={"center"}
+        width={"100%"}
+        flexDirection={"column"}
+        alignSelf={"center"}
+        alignItems={"center"}
+      >
+        <h3 className="animate-charcter">Our Services</h3>
+        <AnimatedShip />
+      </Box>
+      <Stack alignSelf={"center"} gap={10} mt={"5rem"}>
+        <Box display={"flex"} gap={20} alignSelf={"center"}>
+          <CustomButton />
+          <CustomButton />
+          <CustomButton />
+        </Box>
+        <Box display={"flex"} gap={40}>
+          <CustomButton />
+          <CustomButton />
+          <CustomButton />
+        </Box>
+      </Stack>
     </Box>
   );
 }
