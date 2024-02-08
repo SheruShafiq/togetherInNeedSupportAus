@@ -30,6 +30,7 @@ function Home() {
           variant="h2"
           fontWeight={"900"}
           component="h1"
+          color={"#FFFFFF"}
           style={{ color: "#FFFFFF", textAlign: "left" }}
         >
           Empowering Lives,
