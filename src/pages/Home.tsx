@@ -4,6 +4,7 @@ import { Box, Stack, Typography } from "@mui/material";
 
 import AnimatedShip from "../components/AnimatedShip";
 import CustomButton from "../components/CustomButton";
+import DayProgam from "../assets/Day-Program.png";
 import GIF from "../assets/bac.gif";
 import NavBar from "../components/NavBar";
 
@@ -76,12 +77,36 @@ function Home() {
         alignSelf={"center"}
         alignItems={"center"}
       >
-        <h3 className="animate-charcter">Our Services</h3>
+        <Box position={"absolute"} zIndex={1} mt={10}>
+          <h3 className="animate-charcter">Our Services</h3>
+        </Box>
         <AnimatedShip />
       </Box>
-      <Stack alignSelf={"center"} gap={10} mt={"5rem"}>
+      <Stack alignSelf={"center"} gap={10} mt={"12rem"}>
         <Box display={"flex"} gap={20} alignSelf={"center"}>
-          <CustomButton />
+          <Stack mt={"-15rem"} justifyContent={"center"}>
+            <Box
+              component="img"
+              sx={{
+                height: "240px",
+                width: "240px",
+                bottom: "-35px",
+                zIndex: 0,
+              }}
+              position={"relative"}
+              alt="Day Programs"
+              src={DayProgam}
+            />
+            <CustomButton />
+            <Typography
+              fontSize={"2rem"}
+              mt={"1rem"}
+              ml={"-1rem"}
+              fontFamily="Gloria Hallelujah"
+            >
+              Day Programs
+            </Typography>
+          </Stack>
           <CustomButton />
           <CustomButton />
         </Box>

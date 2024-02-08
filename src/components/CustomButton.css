@@ -12,6 +12,7 @@
     border-radius: 100%;
     position: relative;
     transition: .3s;
+    z-index: 1;
   }
   
   .btn-class-name .back {
