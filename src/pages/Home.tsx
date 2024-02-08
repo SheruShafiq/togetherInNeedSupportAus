@@ -7,9 +7,25 @@ import Bubbles from "../components/Bubbles";
 import Footer from "../components/Footer";
 import GIF from "../assets/bac.gif";
 import NavBar from "../components/NavBar";
+import React from "react";
 import ServicesComponent from "../components/ServicesComponent";
+import { useEffect } from "react";
+import useResizeHandler from "../hooks/useResizeHandler";
 
 function Home() {
+  const size = useResizeHandler();
+  const [mobile, setMobile] = React.useState(false);
+
+  useEffect(() => {
+    if (size.width <= 600) {
+      setMobile(true);
+      console.log(mobile);
+      console.log(size);
+    } else {
+      setMobile(false);
+    }
+  }, [size]);
+
   return (
     <Box
       display={"flex"}
@@ -17,7 +33,7 @@ function Home() {
       minHeight={"100vh"}
       flexDirection={"column"}
     >
-      <NavBar />
+      {mobile ? null : <NavBar />}
       <Box
         width={"100%"}
         minHeight={"40vh"} // Set a minimum height for the banner

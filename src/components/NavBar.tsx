@@ -33,7 +33,6 @@ function NavBar() {
         display={"flex"}
         flexDirection={"row"}
         height={"130px"}
-        mr={60}
       >
         <img src={Logo} alt="" />
       </Box>
